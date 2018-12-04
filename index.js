@@ -89,7 +89,10 @@ controller.hears(['hello', 'hi', 'greetings'], ['direct_mention', 'mention', 'di
     bot.reply(message, 'Hello!');
 });
 
+controller.hears(['string','pattern .*',new RegExp('.*','i')],['direct_mention', 'mention', 'direct_message'],function(bot, message) {
+    bot.reply(message, "Sorry, I'm currently busy doing some important work.");
 
+});
 /**
  * AN example of what could be:
  * Any un-handled direct mention gets a reaction and a pat response!
