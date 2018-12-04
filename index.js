@@ -113,3 +113,31 @@ controller.on('direct_message,mention,direct_mention', function (bot, message) {
         bot.reply(message, 'I heard you loud and clear boss.');
     });
 });
+
+// Log every message received
+controller.middleware.receive.use(function(bot, message, next) {
+
+    // log it
+    console.log('RECEIVED: ', message);
+
+    // modify the message
+    message.logged = true;
+
+    // continue processing the message
+    next();
+
+});
+
+// Log every message sent
+controller.middleware.send.use(function(bot, message, next) {
+
+    // log it
+    console.log('SENT: ', message);
+
+    // modify the message
+    message.logged = true;
+
+    // continue processing the message
+    next();
+
+});
