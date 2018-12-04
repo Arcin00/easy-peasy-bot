@@ -1,7 +1,7 @@
 {
-  "name": "easy-peasy-bot",
+  "name": "Evolve-HackDay-Bot",
   "version": "1.0.0",
-  "description": "The awesomest bot evar.",
+  "description": "The awesomest bot ever.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -25,7 +25,7 @@
     "node": "5.1.1"
   },
   "dependencies": {
-    "botkit": "0.2.2",
+    "botkit": "^0.6.21",
     "botkit-storage-mongo": "^1.0.2",
     "mongodb": "^1.4.39"
   }
