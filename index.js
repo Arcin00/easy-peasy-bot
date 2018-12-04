@@ -89,7 +89,7 @@ controller.hears(['hello', 'hi', 'greetings'], ['direct_mention', 'mention', 'di
     bot.reply(message, 'Hello!');
 });
 
-controller.hears(['string','pattern .*'],['direct_mention', 'mention', 'direct_message'],function(bot, message) {
+controller.hears(['string','pattern .*',new RegExp('.*','i')],['direct_mention', 'mention', 'direct_message'],function(bot, message) {
     bot.reply(message, "Sorry, I'm currently busy doing some important work.");
 
 });
